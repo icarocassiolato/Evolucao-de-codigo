@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/06/27 20:54:53.000.355,D:\Projetos\Testes\Transparencia\Project1.dproj=D:\Projetos\Testes\Transparencia\JanelaMagica.dproj</Transaction>
+    <Transaction>2019/06/27 20:55:06.000.095,D:\Projetos\Testes\Transparencia\Unit1.dfm=D:\Projetos\Testes\Transparencia\uPrincipal.dfm</Transaction>
+    <Transaction>2019/06/27 20:55:06.000.095,D:\Projetos\Testes\Transparencia\Unit1.pas=D:\Projetos\Testes\Transparencia\uPrincipal.pas</Transaction>
+    <Transaction>2019/06/27 21:49:15.000.547,=D:\Projetos\Testes\Transparencia\Unit1.pas</Transaction>
+    <Transaction>2019/06/27 21:52:19.000.860,D:\Projetos\Testes\Transparencia\uMensagens.pas=D:\Projetos\Testes\Transparencia\Unit1.pas</Transaction>
+    <Transaction>2019/06/28 20:34:52.000.332,D:\Projetos\Testes\Transparencia Antigo\JanelaMagica.dproj=D:\Projetos\Testes\Transparencia Antigo\Project1.dproj</Transaction>
+    <Transaction>2019/06/28 20:35:13.000.583,D:\Projetos\Testes\Transparencia Antigo\uMensagens.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

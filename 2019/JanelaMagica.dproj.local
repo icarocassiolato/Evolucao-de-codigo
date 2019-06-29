@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/05/23 07:47:52.000.994,=C:\Users\icaro.cassiolato\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/28 09:24:37.000.873,=C:\Users\icaro.cassiolato\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/06/28 09:24:44.000.146,=C:\Users\icaro.cassiolato\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2019/06/28 09:25:17.000.367,C:\Users\icaro.cassiolato\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\icaro.cassiolato\Desktop\Transparece\uComunicacaoWindows.pas</Transaction>
+    <Transaction>2019/06/28 09:25:23.000.206,C:\Users\icaro.cassiolato\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\icaro.cassiolato\Desktop\Transparece\uPrincipal.pas</Transaction>
+    <Transaction>2019/06/28 09:25:23.000.206,C:\Users\icaro.cassiolato\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\icaro.cassiolato\Desktop\Transparece\uPrincipal.dfm</Transaction>
+    <Transaction>2019/06/28 09:25:43.000.009,C:\Users\icaro.cassiolato\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\icaro.cassiolato\Desktop\Transparece\JanelaMagica.dproj</Transaction>
+    <Transaction>2019/06/28 09:55:02.000.010,=C:\Users\icaro.cassiolato\Desktop\Transparece\Unit1.pas</Transaction>
+    <Transaction>2019/06/28 09:59:49.000.536,C:\Users\icaro.cassiolato\Desktop\Transparece\Unit1.pas=C:\Users\icaro.cassiolato\Desktop\Transparece\uHandleValido.pas</Transaction>
+    <Transaction>2019/06/28 14:07:27.000.930,=C:\Users\icaro.cassiolato\Desktop\Transparece\Unit1.pas</Transaction>
+    <Transaction>2019/06/28 14:09:18.000.494,C:\Users\icaro.cassiolato\Desktop\Transparece\Unit1.pas=C:\Users\icaro.cassiolato\Desktop\Transparece\uObjetoSelecionado.pas</Transaction>
+    <Transaction>2019/06/28 16:21:22.000.550,C:\Users\icaro.cassiolato\Desktop\Transparece\uObjetoSelecionado.pas=C:\Users\icaro.cassiolato\Desktop\Transparece\uObjeto.pas</Transaction>
+    <Transaction>2019/06/28 17:09:21.000.964,=C:\Users\icaro.cassiolato\Desktop\Transparece\Unit1.pas</Transaction>
+    <Transaction>2019/06/28 17:09:32.000.574,C:\Users\icaro.cassiolato\Desktop\Transparece\Unit1.pas=C:\Users\icaro.cassiolato\Desktop\Transparece\uHotKeys.pas</Transaction>
+    <Transaction>2019/06/28 17:27:55.000.208,C:\Users\icaro.cassiolato\Desktop\Transparece\uHotKeys.pas=C:\Users\icaro.cassiolato\Desktop\Transparece\uHotKey.pas</Transaction>
+    <Transaction>2019/06/29 15:01:35.000.979,=C:\Users\Icaro\Desktop\Transparece\Unit1.pas</Transaction>
+    <Transaction>2019/06/29 15:02:09.000.700,C:\Users\Icaro\Desktop\Transparece\uMensagens.pas=C:\Users\Icaro\Desktop\Transparece\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
