@@ -1,9 +1,9 @@
 object FrmPrincipal: TFrmPrincipal
-  Left = 0
-  Top = 0
+  Left = 415
+  Top = 191
+  Width = 308
+  Height = 468
   Caption = 'Janela M'#225'gica'
-  ClientHeight = 409
-  ClientWidth = 299
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,13 +15,13 @@ object FrmPrincipal: TFrmPrincipal
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    299
-    409)
+    300
+    437)
   PixelsPerInch = 96
   TextHeight = 13
   object LblSobre: TLabel
-    Left = 253
-    Top = 385
+    Left = 237
+    Top = 416
     Width = 38
     Height = 16
     Anchors = [akTop, akRight]
@@ -35,8 +35,8 @@ object FrmPrincipal: TFrmPrincipal
     OnClick = LblSobreClick
   end
   object LblTutorial: TLabel
-    Left = 189
-    Top = 385
+    Left = 173
+    Top = 416
     Width = 49
     Height = 16
     Anchors = [akTop, akRight]
@@ -52,14 +52,14 @@ object FrmPrincipal: TFrmPrincipal
   object GbxCursor: TGroupBox
     Left = 0
     Top = 0
-    Width = 299
-    Height = 105
+    Width = 300
+    Height = 121
     Align = alTop
     Caption = 'Cursor'
     TabOrder = 0
     DesignSize = (
-      299
-      105)
+      300
+      121)
     object ImgCursorIcone: TImage
       Left = 256
       Top = 16
@@ -69,26 +69,26 @@ object FrmPrincipal: TFrmPrincipal
     object MmoCursor: TMemo
       Left = 15
       Top = 16
-      Width = 236
-      Height = 83
+      Width = 234
+      Height = 97
       Anchors = [akLeft, akTop, akRight]
       Color = clBtnFace
-      ScrollBars = ssBoth
+      ScrollBars = ssHorizontal
       TabOrder = 0
       OnKeyPress = OnKeyPressGenerico
     end
   end
   object GbxSelecionado: TGroupBox
     Left = 0
-    Top = 105
-    Width = 299
-    Height = 104
+    Top = 121
+    Width = 300
+    Height = 120
     Align = alTop
     Caption = 'Selecionado'
     TabOrder = 1
     DesignSize = (
-      299
-      104)
+      300
+      120)
     object ImgSelecionadoIcone: TImage
       Left = 256
       Top = 16
@@ -98,25 +98,25 @@ object FrmPrincipal: TFrmPrincipal
     object MmoSelecionado: TMemo
       Left = 15
       Top = 16
-      Width = 236
-      Height = 83
+      Width = 234
+      Height = 97
       Anchors = [akLeft, akTop, akRight]
       Color = clBtnFace
-      ScrollBars = ssBoth
+      ScrollBars = ssHorizontal
       TabOrder = 0
       OnKeyPress = OnKeyPressGenerico
     end
   end
   object GbxAcoes: TGroupBox
     Left = 0
-    Top = 209
-    Width = 299
+    Top = 241
+    Width = 300
     Height = 168
     Align = alTop
     Caption = 'A'#231#245'es com o objeto'
     TabOrder = 2
     DesignSize = (
-      299
+      300
       168)
     object BtnOcultar: TSpeedButton
       Left = 15
@@ -152,7 +152,7 @@ object FrmPrincipal: TFrmPrincipal
     object TbrTransparencia: TTrackBar
       Left = 12
       Top = 75
-      Width = 281
+      Width = 277
       Height = 24
       Anchors = [akLeft, akTop, akRight]
       Max = 255
@@ -190,7 +190,7 @@ object FrmPrincipal: TFrmPrincipal
   end
   object ChkSempreFrente: TCheckBox
     Left = 8
-    Top = 383
+    Top = 415
     Width = 97
     Height = 17
     Caption = 'Sempre '#224' frente'

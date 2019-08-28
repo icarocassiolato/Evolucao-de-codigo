@@ -9,16 +9,17 @@ type
   TTipoRequisicaoTexto = (trtClasse, trtTexto, trtCaminho);
 
   TComunicacaoWindows = class
-    private
-      function PostarMensagem(piHandle: THandle; pcMensagem: Cardinal;
-        piParametro1: NativeUInt = 0; piParametro2: NativeInt = 0): boolean;
-    public
-      function PegarHandleCursor: THandle;
-      function PegarTexto(piHandle: THandle; ptrtTipoRequisicao: TTipoRequisicaoTexto): string;
-      function EnviarTecla(piHandle: THandle; pcTecla: Char): Boolean;
-      function Fechar(piHandle: THandle): Boolean;
-      procedure AlterarTransparencia(piHandle: THandle;
-        piNivelOpacidade: Integer);
+  private
+    function PostarMensagem(piHandle: THandle; pcMensagem: Cardinal;
+      piParametro1: NativeUInt = 0; piParametro2: NativeInt = 0): boolean;
+  public
+    function PegarHandleCursor: THandle;
+    function PegarTexto(piHandle: THandle; ptrtTipoRequisicao: TTipoRequisicaoTexto): string;
+    function PegarNomeVCL(piHandle: THandle): string;
+    function EnviarTecla(piHandle: THandle; pcTecla: Char): Boolean;
+    function Fechar(piHandle: THandle): Boolean;
+    procedure AlterarTransparencia(piHandle: THandle;
+      piNivelOpacidade: Integer);
   end;
 
 implementation
@@ -50,6 +51,54 @@ begin
   end;
 
   Result := asResult;
+end;
+
+function PegarObjetoExterno(Wnd: HWND; out ProcessId: THandle): Pointer;
+var
+  WindowAtomString: String;
+  WindowAtom: ATOM;
+begin
+  if GetWindowThreadProcessId(Wnd, ProcessId) = 0 then
+    Abort;
+
+  WindowAtomString := Format('Delphi%.8X',[ProcessID]);
+  WindowAtom := GlobalFindAtom(PChar(WindowAtomString));
+  if WindowAtom = 0 then
+    Abort;
+
+  Result := Pointer(GetProp(Wnd, MakeIntAtom(WindowAtom)));
+end;
+
+function TComunicacaoWindows.PegarNomeVCL(piHandle: THandle): string;
+var
+  ProcessId: THandle;
+  ObjSelf: Pointer;
+  Buf: Pointer;
+  bytes: Cardinal;
+  destProcess: THandle;
+begin
+  ObjSelf := PegarObjetoExterno(piHandle, ProcessId);
+
+  destProcess := OpenProcess(PROCESS_VM_READ, TRUE, ProcessId);
+  if destProcess = 0 then
+    Abort;
+
+  try
+    GetMem(Buf, 256);
+    try
+      if not ReadProcessMemory(destProcess, Pointer(Cardinal(ObjSelf) + 8), Buf, 4, bytes) then
+        Abort;
+
+      if not ReadProcessMemory(destProcess, Pointer(Cardinal(Buf^)), Buf, 256, bytes) then
+        Abort;
+
+      Result := PChar(Buf);
+    finally
+      FreeMem(Buf);
+    end;
+  finally
+    CloseHandle(destProcess);
+  end;
 end;
 
 procedure TComunicacaoWindows.AlterarTransparencia(piHandle: THandle; piNivelOpacidade: Integer);

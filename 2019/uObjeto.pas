@@ -12,6 +12,7 @@ type
     FComunicacaoWindows: TComunicacaoWindows;
     function PegarClasse: string;
     function PegarTexto: string;
+    function PegarNomeVCL: string;
     function PegarCaminhoExecutavel: string;
     function PegarHandle: integer;
     function PegarIcone: TIcon;
@@ -26,6 +27,7 @@ type
     procedure AlternarVisualizacao(piTipoVisualizacao: integer);
     property Handle: integer read PegarHandle write AtribuirHandle;
     property Texto: string read PegarTexto;
+    property NomeVCL: string read PegarNomeVCL;
     property Classe: string read PegarClasse;
     property CaminhoExecutavel: string read PegarCaminhoExecutavel;
     property Icone: TIcon read PegarIcone;
@@ -74,6 +76,11 @@ begin
   Result := FComunicacaoWindows.PegarTexto(FHandle, trtTexto);
 end;
 
+function TObjeto.PegarNomeVCL: string;
+begin
+  Result := FComunicacaoWindows.PegarNomeVCL(FHandle);
+end;
+
 function TObjeto.PegarCaminhoExecutavel: string;
 begin
   Result := FComunicacaoWindows.PegarTexto(FHandle, trtCaminho);
@@ -85,6 +92,7 @@ begin
   Result := 'Handle: '  + IntToStr(FHandle) + sLineBreak +
             'Classe: '  + Classe            + sLineBreak +
             'Texto: '   + Texto             + sLineBreak +
+            'Nome: '    + NomeVCL           + sLineBreak +
             'Caminho: ' + CaminhoExecutavel + sLineBreak;
 end;
 
